@@ -1,7 +1,7 @@
 <template>
 <div class="ratesHeader">
   <img class="editIcon" src="../../assets/header_bg.png"/>
-  <h1 class="originNum" @click="editNumber">1</h1>
+  <input class="originNum" @click="editNumber" type="number">{{currentNumber}}</input>
   <div class="headerBottom">
     <img class="countryIcon"  v-bind:src="currentCountry"></div>
     <p class="unitText">{{unitText}}</p>
@@ -17,7 +17,8 @@ export default {
     return {
       updateTime: "更新时间：2018/6/4",
       unitText: "CNY \n 人民币",
-      currentCountry: "../../assets/china.png"
+      currentCountry: "../../assets/china.png",
+      currentNumber: '2'
     }
   },
   methods: {
