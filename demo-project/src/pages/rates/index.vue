@@ -1,13 +1,13 @@
 <template>
-<div class="ratesHeader">
-  <img class="editIcon" src="../../assets/header_bg.png"/>
-  <input class="originNum" @click="editNumber" type="number">{{currentNumber}}</input>
-  <div class="headerBottom">
-    <img class="countryIcon"  v-bind:src="currentCountry"></div>
-    <p class="unitText">{{unitText}}</p>
-    <p class="updateTime">{{updateTime}}</p>
+  <div class="ratesHeader">
+    <img class="editIcon" src="../../assets/header_bg.png"/>
+    <input class="originNum" @click="editNumber" type="number"/>>
+    <div class="headerBottom">
+      <img class="countryIcon"  v-bind:src="currentCountry"></div>
+      <p class="unitText">{{unitText}}</p>
+      <p class="updateTime">{{updateTime}}</p>
+    </div>
   </div>
-</div>
 </template>
 
 
@@ -28,10 +28,7 @@ export default {
   }
 }
 </script>
-
-
-<style scoped>
-
+<style lang="less">
 .ratesHeader {
   position: relative;
   margin: 0;
@@ -59,6 +56,8 @@ export default {
 
 }
 .headerBottom {
+  display: flex;
+  flex-direction: row;
   position: relative;
   top: 40px;
   margin: 0;
@@ -67,13 +66,14 @@ export default {
   background-color: gray;
 }
 .countryIcon {
-  padding: 5px;
-  border-radius: 50%;
-  margin: 0;
-  width: 40px;
-  height: 30px;
-  left: 10px;
-}
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 0;
+    width: 40px;
+    height: 30px;
+    left: 10px;
+  }
 .unitText {
   margin: 0;
   position: relative;
@@ -84,15 +84,16 @@ export default {
   background-color: brown;
 }
 .updateTime {
-  margin: 0;
-  position: absolute;
-  text-align: right;
-  width: 50%;
-  height: 15px;
-  bottom: 10px;
+  margin: 0 auto;
+  position: relative;
   right: 10px;
+  top: -20px;
+  width: 100%;
+  height: 15px;
   font-size: 9pt;
-  background-color: blueviolet;
+  text-align: right;
+  // background-color: blueviolet;
 }
+
 </style>
 
